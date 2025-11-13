@@ -1,27 +1,24 @@
 {
-  "name": "stock-app-react",
+  "name": "stock-expiration-app",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  // 1. URL pública: CAMBIA ESTO
+  "homepage": "https://github.com/viegaemiliano-rgb/stock-control-app", 
+  
+  // ... otras dependencias ...
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    
+    // 2. SCRIPTS DE DESPLIEGUE (AÑADE ESTO)
+    "predeploy": "npm run build", 
+    "deploy": "gh-pages -d dist"  
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.1",
-    "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.2",
-    "@vitejs/plugin-react": "^5.1.0",
-    "eslint": "^9.39.1",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.4.24",
-    "globals": "^16.5.0",
-    "vite": "^7.2.2"
+    "gh-pages": "^6.1.1",
+    // ... otros devDependencies ...
   }
 }
